@@ -10,7 +10,6 @@ class Solution:
                     return True
         return False
 
-
     def haspathcore(self, matrix, rows, cols, row, col, path, pathlength, visited):
         if len(path) == pathlength:
             return True
@@ -26,6 +25,8 @@ class Solution:
                 pathlength -= 1
                 visited[row*cols + col] = False
             return hasPath
+
+
 s = Solution()
 ifTrue = s.hasPath("ABCESFCSADEE", 3, 4, "BCCED")
 ifTrue2 = s.hasPath("ABCEHJIGSFCSLOPQADEEMNOEADIDEJFMVCEIFGGS", 5, 8, "SGGFIECVAASABCEHJIGQEM")

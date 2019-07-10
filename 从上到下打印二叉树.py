@@ -8,4 +8,3 @@ class Solution:
     # 返回从上到下每个节点值列表，例：[1,2,3]
     def PrintFromTopToBottom(self, root):
         # write code here
-        

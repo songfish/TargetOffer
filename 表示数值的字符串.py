@@ -30,6 +30,7 @@ class Solution:
             return False
         return True
 
+
 s = Solution()
 result = s.isNumeric('123.45e+6')
 print(result)

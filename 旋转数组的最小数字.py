@@ -25,5 +25,4 @@ def MinInOrder(array, start, end):
     return result
 
 
-x = minNumberInRotateArray(rotateArray=[1,0,1,1,1])
-print(x)
+print(minNumberInRotateArray(rotateArray=[1,0,1,1,1]))

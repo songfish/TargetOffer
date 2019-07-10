@@ -9,6 +9,7 @@ class Solution:
             n = (n - 1) & n
         return count
 
+
 s = Solution()
 result = s.NumberOf1(-2)
 print(result)

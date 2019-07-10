@@ -5,6 +5,7 @@ def Print1ToMaxOfNDigits(n):
         result.append(i)
     return result
 
+
 def Print1ToMaxOfNDigits_2(n):
     if n <= 0:
         return

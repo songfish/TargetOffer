@@ -4,15 +4,14 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def FindKthToTail(self, head, k):
         # write code here
         if head == None or k <= 0:
             return None
-
         pAHead = head
         pBehind = None
-
         for i in range(k - 1):
             if pAHead.next != None:
                 pAHead = pAHead.next
@@ -23,6 +22,7 @@ class Solution:
             pAHead = pAHead.next
             pBehind = pBehind.next
         return pBehind
+
 
 node1 = ListNode(10)
 node2 = ListNode(11)

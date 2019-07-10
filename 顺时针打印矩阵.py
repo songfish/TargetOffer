@@ -8,6 +8,7 @@ class Solution:
         rows = len(matrix)
         columns = len(matrix[0])
         result = []
+
         def PrintMatrixInCircle(start):
             endX = columns - 1 - start
             endY = rows - 1 - start

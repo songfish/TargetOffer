@@ -33,7 +33,6 @@ class Solution:
             return True
 
 
-
 s = Solution()
 # print(s.IsPopOrder([1,2,3,4,5],[4,3,5,1,2]))
 print(s.IsPopOrder2([1,2,3,4,5],[4,5,3,2,1]))

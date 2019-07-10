@@ -3,22 +3,24 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+
+
 class Solution:
     def EntryNodeOfLoop(self, pHead):
         # write code here
         meetingNode = self.MeetingNode(pHead)
-        if meetingNode == None:
+        if meetingNode is None:
             return None
         pNode1 = meetingNode
         count = 1
-        while(pNode1.next != meetingNode):
+        while pNode1.next != meetingNode:
             pNode1 = pNode1.next
             count += 1
         pNode1 = pHead
         for i in range(count):
             pNode1 = pNode1.next
         pNode2 = pHead
-        while(pNode1 != pNode2):
+        while pNode1 != pNode2:
             pNode1 = pNode1.next
             pNode2 = pNode2.next
         return pNode1
@@ -28,12 +30,12 @@ class Solution:
             return None
         pFast = pHead
         pSlow = pHead.next
-        while(pSlow != None and pFast != None):
+        while pSlow is not None and pFast is not None:
             if pSlow == pFast:
                 return pFast
             pSlow = pSlow.next
             pFast = pFast.next
-            if pFast != None:
+            if pFast is not None:
                 pFast = pFast.next
         return None
 

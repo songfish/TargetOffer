@@ -29,5 +29,5 @@ class Solution:
 
 
 s = Solution()
-result = s.Power1(2, -3)
-print(result)
+print(s.Power1(2, -3))
+

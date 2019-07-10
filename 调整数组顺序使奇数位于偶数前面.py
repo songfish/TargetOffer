@@ -14,6 +14,7 @@ class Solution:
         result.extend(even)
         return result
         # return odd+even
+
     def reOrderArray1(self,array):
         if len(array) < 1:
             return
@@ -30,6 +31,7 @@ class Solution:
             array[front], array[rear] = array[rear], array[front]
         array[front], array[rear] = array[rear], array[front]
         return array
+
 
 s = Solution()
 result = s.reOrderArray1([1,2,3,4,5,6,7])

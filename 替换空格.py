@@ -9,6 +9,8 @@ def replaceSpace(s):
         else:
             result.append(data)
     return "".join(result)
+
+
 def replaceSpace2(s):
     s = list(s)
     length = len(s)
@@ -16,6 +18,8 @@ def replaceSpace2(s):
         if s[i] == ' ':
             s[i] = '%20'
     return ''.join(s)
+
+
 def replaceSpace3(s):
     blank_num = 0
     for i in s:
@@ -25,9 +29,7 @@ def replaceSpace3(s):
     new_str = new_length * [None]
     i = len(s) - 1
     j = new_length - 1
-    while i >= 0 and j >= i:
-        # print(i,j)
-        # print(s[i])
+    while 0 <= i <= j:
         if s[i] == ' ':
             new_str[j-2:j+1] = ['%', '2', '0']
             j -= 3
@@ -36,7 +38,9 @@ def replaceSpace3(s):
             new_str[j] = s[i]
             i -= 1
             j -= 1
-        print(new_str)
+        # print(new_str)
     return ''.join(new_str)
+
+
 h = replaceSpace3('We are Happy')
 print(h)

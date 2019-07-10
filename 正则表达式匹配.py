@@ -37,6 +37,7 @@ class Solution:
                 C = self.match(s[1:], pattern[2:])
                 return A or B or C
 
+
 s = Solution()
 print(s.match('aa', 'a'))
 
