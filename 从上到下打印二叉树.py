@@ -15,7 +15,7 @@ class Solution:
         queue = []
         result = []
         queue.append(root)
-        while(len(queue)>0):
+        while len(queue)>0:
             currentroot = queue.pop(0)
             result.append(currentroot.val)
             if currentroot.left:
