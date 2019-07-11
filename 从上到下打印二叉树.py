@@ -12,10 +12,9 @@ class Solution:
         # write code here
         if root is None:
             return []
-        queue = []
         result = []
-        queue.append(root)
-        while len(queue) > 0:
+        queue = [root]
+        while queue:
             currentroot = queue.pop(0)
             result.append(currentroot.val)
             if currentroot.left:
