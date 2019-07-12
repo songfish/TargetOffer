@@ -17,8 +17,16 @@ class Solution:
                 return [[root.val]]
             else:
                 return []
-        a = self.FindPath(root.left, expectNumber-root.val) + self.FindPath(root.right, expectNumber-root.val)
-        return [[root.val] + i for i in a]
+        stack = []
+        leftStack = self.FindPath(root.left, expectNumber-root.val)
+        for i in leftStack:
+            i.insert(0, root.val)
+            stack.append(i)
+        rightStack = self.FindPath(root.right, expectNumber-root.val)
+        for i in rightStack:
+            i.insert(0, root.val)
+            stack.append(i)
+        return stack
 
 
 pNode1 = TreeNode(10)
