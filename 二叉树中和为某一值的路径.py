@@ -26,17 +26,30 @@ class Solution:
         for i in rightStack:
             i.insert(0, root.val)
             stack.append(i)
-        return stack
+        return sorted(stack, key=len, reverse=True)  # 为了使得list长度长的在前面
+        # return stack
+
+# example1
+# pNode1 = TreeNode(10)
+# pNode2 = TreeNode(5)
+# pNode3 = TreeNode(12)
+# pNode4 = TreeNode(4)
+# pNode5 = TreeNode(7)
+# pNode1.left = pNode2
+# pNode1.right = pNode3
+# pNode2.left = pNode4
+# pNode2.right = pNode5
 
 
+# example2
 pNode1 = TreeNode(10)
-pNode2 = TreeNode(5)
-pNode3 = TreeNode(12)
+pNode2 = TreeNode(12)
+pNode3 = TreeNode(5)
 pNode4 = TreeNode(4)
 pNode5 = TreeNode(7)
 pNode1.left = pNode2
 pNode1.right = pNode3
-pNode2.left = pNode4
-pNode2.right = pNode5
+pNode3.left = pNode4
+pNode3.right = pNode5
 s = Solution()
 print(s.FindPath(pNode1, 22))
