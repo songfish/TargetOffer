@@ -20,7 +20,6 @@ class Solution:
             pCloned = RandomListNode(0)
             pCloned.label = pNode.label
             pCloned.next = pNode.next
-            # pCloned.random = pNode.random
             pNode.next = pCloned
             pNode = pCloned.next
 
@@ -34,25 +33,17 @@ class Solution:
 
     def ReconnectNodes(self, pHead):
         pNode = pHead
-        # pClonedHead = None
-        # pClonedNode = None
-        # if pNode:
-        #   pClonedNode = pNode.next
-        #   pClonedHead = pClonedNode
-        #   pNode.next = pClonedNode.next
-        #   pNode = pNode.next
         pClonedNode = pNode.next
         pClonedHead = pClonedNode
-        # pNode.next = pClonedNode.next
         pNode.next = pClonedHead.next
         pNode = pNode.next
         while pNode:
-            # pNode.next = pClonedNode.next
             pClonedNode.next = pNode.next
             pClonedNode = pClonedNode.next
             pNode.next = pClonedNode.next
             pNode = pNode.next
         return pClonedHead
+
 
 node1 = RandomListNode(1)
 node2 = RandomListNode(3)
