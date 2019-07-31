@@ -18,3 +18,4 @@ class Solution:
 
 s = Solution()
 print(s.Permutation('aa'))
+print(s.Permutation('abc'))
