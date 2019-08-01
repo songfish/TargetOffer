@@ -16,6 +16,7 @@ class Solution:
                 pStr.append(charList[i]+j)
         return pStr
 
+
 s = Solution()
 print(s.Permutation('aa'))
 print(s.Permutation('abc'))
