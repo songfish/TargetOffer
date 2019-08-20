@@ -1,3 +1,4 @@
+import heapq
 class Solution:
     def GetLeastNumbers_Solution1(self, tinput, k):
         # write code here
@@ -48,7 +49,22 @@ class Solution:
         numbers[rightmark], numbers[start] = numbers[start], numbers[rightmark]
         return rightmark
 
+    def GetLeastNumbers_Solution2(self, tinput, k):
+        if tinput is None or len(tinput) < k or len(tinput) <= 0 or k <= 0:
+            return []
+        output = []
+        for number in tinput:
+            if len(output) < k:
+                output.append(number)
+            else:
+                output = heapq.nlargest(k, output)
+                if number >= output[0]:
+                    continue
+                else:
+                    output[0] = number
+        return output[::-1]
+
 
 s = Solution()
 # print(s.GetLeastNumbers_Solution([4,5,1,6,2,7,3,8], 4))
-print(s.GetLeastNumbers_Solution([4,5,1,6,2,7,3,8], 5))
+print(s.GetLeastNumbers_Solution2([4,5,1,6,2,7,3,8], 5))
